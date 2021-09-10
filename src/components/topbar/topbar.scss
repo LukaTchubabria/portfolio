@@ -19,7 +19,7 @@
         .left {
             display: flex;
             align-items: center;
-            
+
             .logo {
                 margin-right: 40px;
                 font-size: 40px;
@@ -33,6 +33,10 @@
                 align-items: center;
                 margin-left: 30px;
 
+                @include mobile {
+                    display: none;
+                }
+
                 .icon {
                     font-size: 18px;
                 }
@@ -45,7 +49,7 @@
         }
 
         .right {
-            
+
             .hamburger {
                 display: flex;
                 flex-direction: column;
@@ -68,18 +72,20 @@
     &.active {
         background-color: $mainColor;
         color: white;
-        
+
         .hamburger {
-            
+
             span {
 
                 &:first-child {
                     background-color: white;
                     transform: rotate(45deg);
                 }
+
                 &:nth-child(2) {
                     opacity: 0;
                 }
+
                 &:last-child {
                     background-color: white;
                     transform: rotate(-45deg);
